@@ -52,8 +52,8 @@ fetch(`https://6860899b8e74864084437167.mockapi.io/jmt-futurodev/api/parceiros/$
         <p><strong>Tipo de Parceiro:</strong> ${parceiro.tipoParceiro}</p>
 
         <h3>Endereço</h3>
-        <p>${parceiro.rua}, Nº ${parceiro.numero}</p>
-        <p>${parceiro.bairro}</p>
+        <p><strong>Rua:</strong> ${parceiro.rua}, Nº ${parceiro.numero}</p>
+        <p><strong>Bairro:</strong> ${parceiro.bairro}</p>
 
         <h3>Resíduos aceitos</h3>
         ${residuosAceitosHtml}
