@@ -38,7 +38,9 @@ fetch(`https://6860899b8e74864084437167.mockapi.io/jmt-futurodev/api/parceiros/$
 
     if (avatarSrc === './imagens/ecoponto.jpg') {
       avatarClass = 'avatar avatarEco';
-    }
+    } else if (avatarSrc === './imagens/PEV-Man.png') {
+      avatarClass = 'avatar avatarPev';
+    }  
 
     detalhesParceiro.innerHTML = `
       <div class="card-detalhes">
