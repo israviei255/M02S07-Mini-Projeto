@@ -1,3 +1,5 @@
+import {modificarData} from './modulos/modificar-data.js';
+
 const cards = document.getElementById('cards')
 const form = document.getElementsByTagName('form')[0];
 const input = document.getElementsByTagName('input')[0];
@@ -74,5 +76,9 @@ function criarCard(parceiro) {
     card.style.whiteSpace = 'pre-line'
     card.innerHTML += '\n\n' + '<strong>Nome: </strong>' + parceiro.nomeParceiro + '\n';
     card.innerHTML += '\n' + '<strong>Bairro: </strong>' + parceiro.bairro + '\n';
-    card.innerHTML += '\n' + '<strong>Data de Registro: </strong>' + parceiro.dataCriacao;
+    card.innerHTML += '\n' + '<strong>Data de Registro: </strong>' + modificarData(parceiro.dataCriacao);
+
+    card.addEventListener('click', () => {
+        window.location.href = `detalhes-parceiro.html?id=${parceiro.id}`;
+    });      
 }
